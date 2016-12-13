@@ -1,3 +1,9 @@
-**
-!dudBeleg5.tex
-!.gitignore
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.log
+*.pdf
+*.xml
+*.gz
