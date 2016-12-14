@@ -8,7 +8,7 @@
   Journal                  = {Netzpolitik.org},
   Year                     = {2015},
 
-  Url                      = {https://netzpolitik.org/2015/it-sicherheitsgesetz-hat-bundesrat-passiert-papiertiger-ist-verabschiedet/ : letzer Zugriff: 13.12.2016}
+  Url                      = {https://netzpolitik.org/2015/it-sicherheitsgesetz-hat-bundesrat-passiert-papiertiger-ist-verabschiedet/ ; letzter Zugriff: 13.12.2016}
 }
 
 @Article{Bis15a,
@@ -19,7 +19,16 @@
 
   Month                    = {04},
 
-  Url                      = {https://netzpolitik.org/2015/anhoerung-zum-it-sicherheitsgesetz-im-bundestag/}
+  Url                      = {https://netzpolitik.org/2015/anhoerung-zum-it-sicherheitsgesetz-im-bundestag/ ; letzter Zugriff: 13.12.2016}
+}
+
+@Misc{BMI,
+  Title                    = {IT und Cybersicherheit},
+
+  Author                   = {BMI},
+  HowPublished             = {online},
+
+  Url                      = {https://www.bmi.bund.de/DE/Themen/Sicherheit/IT-Cybersicherheit/it-cybersicherheit_node.html ; letzter Zugriff: 13.12.2016}
 }
 
 @Misc{GesEntw15,
@@ -31,7 +40,7 @@
   Year                     = {2015},
 
   Abstract                 = {Gesetzentwurf der Bundesregierung Entwurf eines Gesetzes zur Erhöhung der Sicherheit informationstechnischer Systeme (IT-Sicherheitsgesetz)},
-  Url                      = {http://dip21.bundestag.de/dip21/btd/18/040/1804096.pdf : letzter Zugriff: 13.12.2016}
+  Url                      = {http://dip21.bundestag.de/dip21/btd/18/040/1804096.pdf ; letzter Zugriff: 13.12.2016}
 }
 
 @Misc{BeschEmp15,
@@ -43,7 +52,7 @@
   Year                     = {2015},
 
   Abstract                 = {Beschlussempfehlung und Bericht des Innenausschusses (4. Ausschuss) zu dem Gesetzentwurf der Bundesregierung – Drucksache 18/4096 – Entwurf eines Gesetzes zur Erhöhung der Sicherheit informationstechnischer Systeme (IT-Sicherheitsgesetz)},
-  Url                      = {http://dip21.bundestag.de/dip21/btd/18/051/1805121.pdf : letzter Zugriff: 13.12.2016}
+  Url                      = {http://dip21.bundestag.de/dip21/btd/18/051/1805121.pdf ; letzter Zugriff: 13.12.2016}
 }
 
 @Misc{NeuCCC15,
@@ -58,11 +67,6 @@ Sicherheit informationstechnischer Systeme
 
   Abstract                 = {Stellungnahme des CCC (Chaos Computer Club)},
   Company                  = {(Chaos Computer Club)},
-  Url                      = {https://ccc.de/system/uploads/186/original/ITSG_Stellungnahme.pdf : letzer Zugriff: 13.12.2016}
-}
-
-@Article{NetOrg15,
-  Owner                    = {alex},
-  Timestamp                = {2016.12.14}
+  Url                      = {https://ccc.de/system/uploads/186/original/ITSG_Stellungnahme.pdf ; letzter Zugriff: 13.12.2016}
 }
 
