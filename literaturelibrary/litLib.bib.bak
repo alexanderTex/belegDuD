@@ -4,11 +4,22 @@
 
 @Article{Bis15,
   Title                    = {IT-Sicherheitsgesetz hat Bundesrat passiert – Papiertiger ist verabschiedet},
-  Author                   = {Anna Bisellia},
+  Author                   = {Anna Biselli},
   Journal                  = {Netzpolitik.org},
   Year                     = {2015},
 
   Url                      = {https://netzpolitik.org/2015/it-sicherheitsgesetz-hat-bundesrat-passiert-papiertiger-ist-verabschiedet/ : letzer Zugriff: 13.12.2016}
+}
+
+@Article{Bis15a,
+  Title                    = {Anhörung zum IT-Sicherheitsgesetz im Bundestag (Liveblog und Fazit)},
+  Author                   = {Anna Biselli},
+  Journal                  = {Netzpolitik.org},
+  Year                     = {2015},
+
+  Month                    = {04},
+
+  Url                      = {https://netzpolitik.org/2015/anhoerung-zum-it-sicherheitsgesetz-im-bundestag/}
 }
 
 @Misc{GesEntw15,
@@ -48,5 +59,10 @@ Sicherheit informationstechnischer Systeme
   Abstract                 = {Stellungnahme des CCC (Chaos Computer Club)},
   Company                  = {(Chaos Computer Club)},
   Url                      = {https://ccc.de/system/uploads/186/original/ITSG_Stellungnahme.pdf : letzer Zugriff: 13.12.2016}
+}
+
+@Article{NetOrg15,
+  Owner                    = {alex},
+  Timestamp                = {2016.12.14}
 }
 
