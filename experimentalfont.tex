@@ -1,0 +1,146 @@
+% /===========================================================================\
+%
+%   preamble
+%
+% \===========================================================================/
+
+\documentclass[a4paper,letterpaper,twocolumn,10pt,ngerman]{article}
+
+% /=================================================================\
+%   	standard
+% \=================================================================/
+\usepackage{babel}
+\usepackage[utf8]{inputenc}	% using umlauts = encoding
+\usepackage[T1]{fontenc}
+
+% /=================================================================\
+%   	fontz
+% \=================================================================/
+%\usepackage[default]{sourcecodepro}
+
+\usepackage{tgcursor}
+\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
+
+
+
+\usepackage{mdwlist}	% to shrink the spaces between the items into a list
+\usepackage{blindtext}	% fill parts with blindtex
+\usepackage{verbatim}	%u sing in multiline comments
+
+\usepackage[german=guillemets]{csquotes}
+\usepackage[
+			backend=biber,
+			style=alphabetic-verb,
+			citestyle=alphabetic-verb
+			]
+			{biblatex}	% Einbinden von biblatex zur Literaturverwaltung.
+\addbibresource{literaturelibrary/litLib.bib}	% Literatursammlung
+
+
+% /=================================================================\
+%   	commands
+% \=================================================================/
+\newcommand{\descitem}[1]{\textbf{#1}}	% style of description items
+
+% /===========================================================================\
+%
+%   init document
+%
+% \===========================================================================/
+
+\begin{document}
+
+% /===========================================================================\
+%
+%   title
+%
+% \===========================================================================/
+
+% don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Die öffentliche Anhörung des Innenausschusses zum Thema "`Gesetz zur Erhöhung der Sicherheit informationstechnischer Systeme (IT-Sicherheitsgesetzt)"'}
+
+\author{
+{\rm Alexander\ Lüdke}\\
+MatrNr. 548965
+\and
+{\rm Nils Brandt}\\
+MatrNr. 549906
+}
+
+\maketitle
+
+\thispagestyle{empty}
+
+% /===========================================================================\
+%
+%   main part
+%
+% \===========================================================================/
+
+\section*{Abstract}
+\label{sec:Abstract}
+Das folgende Dokument ist als Beleg anzusehen, welches für den Studiengang Angewandte Informatik im Fach Datenschutz und Datensicherheit erstellt wurde. Es befasst sich hauptsächlich mit dem Inhalten der öffentlichen Anhörung des deutschen Bundestages zum Thema "`Gesetz zur Erhöhung der Sicherheit informationstechnischer Systeme"'  und der damit einhergehenden Argumentation der Sachverständige. Da der Umfang dieser Ausarbeitung die zwei Seiten nicht überschreiten darf, nehmen die Autoren einen Teilaspekt der Anhörung und werden diesen, durch ausgiebige Recherchen, näher beleuchten. 
+
+\section{Einleitung}
+\label{sec:Einleitung} 
+Die Digitalisierung in Staat, Wirtschaft und Gesellschaft hat Deutschland in nur wenigen Jahren grundlegend verändert. Neue Möglichkeiten der Kommunikation, des Wissenszugangs und der innovativen Gestaltung führen zu mehr sozialer Interaktion, neuen Geschäftsmodellen und neuen Feldern für Forschung und Entwicklung. Vernetzte elektronische Geräte prägen verstärkt den Lebens- und Arbeitsalltag der Menschen.
+
+
+Der Staat hat die Pflicht, diese Veränderungsprozesse im Interesse der Bürgerinnen und Bürger gemeinsam mit der Wirtschaft und weiteren Akteuren zu bewerten, aktiv zu gestalten und Rahmenbedingungen zu schaffen, um diese Veränderungsprozesse weiterzuentwickeln. \cite{BMI} Eines dieser Entwicklungswerkzeuge ist das beschließen von Gesetzten.
+
+\section{Vom Entwurf zum Gesetz}
+\label{sec:EntwurfzumGesetz}
+Gegenstand der öffentlichen Anhörung  war der von der Bundesregierung vorgelegte Gesetzentwurf \cite{GesEntw15}, der das IT~-Sicherheitsgesetzt anpassen bzw. erweitern sollte und dabei die Erhöhung der Sicherheit informationstechnischer Systeme zum Gegenstand hatte. 
+\begin{quotation}
+"`Die vorgesehenen Neuregelungen dienen dazu, [...] um den aktuellen und zukünftigen Gefährdungen der IT-Sicherheit wirksam begegnen zu können. Ziel des Gesetzes sind die Verbesserung der IT~-Sicherheit von Unternehmen, der verstärkte Schutz der Bürgerinnen und Bürger im Internet und in diesem Zusammenhang auch die Stärkung von BSI und Bundeskriminalamt (BKA)."' \cite[S. 1]{GesEntw15} 
+\end{quotation}
+
+\subsection{Standpukte der Sachverständigen}
+\label{subsec:StandpunkteSachverständige}
+Um nahezu alle Aspekte dieses Sachverhaltes zu betrachten, wurde im Vorfeld Stellungnahme von unterschiedlichen Personen -- bzw. Interessensgruppen eingeholt, die während der Anhörung die Möglichkeit erhielten, diese näher zu erläutern. Die geladenen Sachverständigen waren folgende
+
+\begin{description*}
+    \item	{\descitem{Iris Plöger}}, Bundesverband der Deutschen Industrie e.V., Leiterin der Abteilung Digitalisierung
+    \item	{\descitem{Dipl.-Ing.  (FH) Thomas Tschersich}}, Deutsche Telekom AG, Leiter Group Security Services
+    \item	{\descitem{Dr. Axel Wehling}}, Gesamtverband der Deutschen Versicherungswirtschaft e.V.
+    \item	{\descitem{Linus Neumann}}, Chaos Computer Club (CCC), Berlin
+
+	\item	{\descitem{Michael Hange}}, Präsident des Bundesamtes für Sicherheit in der Informationstechnik
+    \item	{\descitem{Prof. Dr. Gerrit Hornung}}, Universität Passau, Lehrstuhl für öffentliches Recht, IT-Recht und Rechtsinformatik
+    \item	{\descitem{Prof. Dr. Alexander Roßnagel}}, Universität Kassel, Institut für Wirtschaftsrecht
+    \item	{\descitem{Prof. Dr.-Ing. Jochen Schiller}}, Freie Universität Berlin, Institute of Computer Science
+\end{description*}
+
+Aus den Schilderungen der jeweiligen Sachverständigen traten u.a. die folgenden Punkte in den Vordergrund. Die Stellung der BSI als zentrale Meldestelle. Auf Grund ihrer Zugehörigkeit zum BMI und der damit einhergehenden Verbindung zum BND tritt hier ein gewisses Misstrauen in den Vordergrund. Wie in der Stellungnahme von Herrn Neumann \cite[vlg.][S. 4]{NeuCCC15}  beschreiben, wenn das BSI das Monitoring von kritischen Angriffszielen übernimmt, dann wäre diese eine rein defensive Ausrichtung, was jedoch im Gegensatz zu den offensiven Ambitionen des BMI stehen würde. Hinzu kommt, dass das BSI nach §7a Abs.2 ITSG die aus den Untersuchungen gewonnenen Erkenntnisse nur zur Erfüllung der Aufgaben verwenden darf. Das Bundesamt darf seine Erkenntnisse weitergeben und veröffentlichen, soweit dies zur Erfüllung dieser Aufgaben erforderlich ist. Zuvor ist dem Hersteller der betroffenen Produkte und Systeme mit angemessener Frist Gelegenheit zur Stellungnahme zu geben. Wie bereites durch die Redaktion von Netzpolitik.org festgestellt wurde \cite{Bis15}, liegt die Anwendung des Gesetzestextes aufgrund schwammiger Formulierungen und industriefreundlicher Meldepflichten im Ermessensspielraum der der jeweiligen Unternehmen. 
+
+\subsection{Datensicherheit}
+\label{sub:Datensicherheit}
+% datasecurity
+Doch wenn wir die Anhörung aus Sicht der Datensicherheit betrachten, fällt uns auf, dass der Gesetzesentwurf den Fokus auf kritische Infrastrukturen legt und weniger auf die Wirtschaft in form mittelständischen Unternehmen und noch viel weniger auf den einzelnen Endanwender. Dabei sind es diese Benutzerdaten, die typischerweise von größeren Angriffen auf die Anbieter
+von Online- Diensten, also Online- Shops, E - Mail- Anbieter oder sogenannte Soziale Netzwerke stammen, die in diesem Fall die betroffenen Nutzer nicht ausreichend geschützt und – gedeckt vom BSI – auch nicht über den erfolgten Angriff
+informiert haben und auch durch das neue Gesetzt nicht gemeldet werden, da die Weitergabe von Informationen  aus Sicherheitslücken nach §7a Abs.2 ITSG zeitversetzt weitergegeben werden sollen.
+
+\section{Fazit}
+\label{sec:Fazit}
+Aus unserer Sicht reicht es nicht aus eine zentrale Meldestelle in form der BSI festzulegen und der Wirtschaft die Entscheidung zu überlassen wann, wie und ob sie ihre Vorfälle zu melden haben. Da dies zum gegenwärtigen Zeitpunkt der Fall ist, \cite{Bis15} sollte das BSI dazu verpflichtet werden dem Endanwender zeitnah die erschlossenen Kenntnisse zur Verfügung zu stellen, damit dieser selbständig in der Lage ist Tätig zu werden, um seine Daten zu schützen. Dadurch ist es möglich über den Endanwender Druck auf den Service Provider auszuüben. Doch schon hier versagt das neu Gesetzt wie im Kapitel \ref{sec:EntwurfzumGesetz} beschrieben. Ein anderes, viel angesprochenes Thema sind die Speicherbefugnisse für Telemedien- und Telekommunikationsanbieter bezüglich Verkehrsdaten nach §100 TKG, die zur Angriffserkennung gewährt werden sollen. Hier ist eine Konkretisierung und Beschränkung der Befugnisse dringend erforderlich, um nicht eine Vorratsdatenspeicherung durch die Hintertür einzuführen. \cite{Bis15a}
+
+\newpage
+
+% /===========================================================================\
+%
+% 	bibliography
+%
+% \===========================================================================/
+\printbibliography
+
+\end{document}
+
+
+
+
+
+
+
