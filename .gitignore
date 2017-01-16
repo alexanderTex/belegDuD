@@ -7,3 +7,8 @@
 *.pdf
 *.xml
 *.gz
+*.toc
+*.nav
+*.out
+*.png
+*.snm
