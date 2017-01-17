@@ -1,13 +1,3 @@
-<!--
-    * Abs 3 ->
-        * c - revoking?
-    * Abs 4 ->
-        * b, c, d, e, f, g
-    * Abs 5 ->
-        * b, c, d, e
-    * Abs 6 ->
-        * a, b, c, e
--->
 ## DuD - Ausarbeitung der Fragen
 ### 1. Grundbegriffe
 
@@ -116,7 +106,7 @@ e. Beschreiben Sie ein asymmetrisches Veschlüsselungsverfahren und auf welchem 
         Ablauf:
         1. Wähle 2 Primzahlen p und q (~600-stelling)
         2. N = p * q
-        3. Eulersche  φ-Funktion von N:  φ(N) = (p-1)*(q-1)
+        3. Eulersche  φ-Funktion von N:  φ(N) = (p-1)\*(q-1)
         4. Wähle zu  φ(N) teilerfremdes e mit 1<e< φ(N)
         5. Berechne multiplikatives Inverses d, do dass
             e*d + k* φ(N) = 1 = ggT(e, φ(N)) (verwirf k)
@@ -126,7 +116,7 @@ e. Beschreiben Sie ein asymmetrisches Veschlüsselungsverfahren und auf welchem 
             1. 2 Primzahlen p=307, q=859
             2. N = p * q (N:RSA-Modul)
             3. Damit ist N=263.713
-            4.  φ(N)=(p-1)*(q-1)=262.548
+            4.  φ(N)=(p-1)\*(q-1)=262.548
             5. Zufälliges teilerfremdes e=1.721, so dass d=1373
             = public key = (1721, 263.713)
             = private key = (1373, 263.713)
@@ -219,6 +209,7 @@ c. Beschreiben Sie die Begriffe >>Enrollment<<, >>False Accept Rate<<, >>False R
     * False Reject Rate (FRR)
         "FRR sagt aus, dass das biometrisches Sicherheitssystem einen autorisierten Zugriff als unautorisiert deklariert."
     * Revoking
+        "Die im Enrollment erzeugten Daten wieder aus dem Archiv entfernen. (Bsp. Tod)"
 
 d. Welche vier Authentisierungsarten haben wir unterschieden? Nennen Sie für jede ein Beispiel.
 
@@ -269,14 +260,28 @@ c. Was ist der Unterschied zwischen einem Web of Trust und einer PKI? Nennen Sie
 d. Nennen und erläutern Sie drei Angriffe auf TLS.
 
     * Downgrade
-    * POODLE
+        Das erzwingen einer veralteten TLS/SSL Vesion, um die in ihnen befindlichen Sicherheitslüclen auszunutzen.
+
+    * POODLE (Padding Oracle On Downgraded Legacy Encryption)
+        Es wird ein Downgrade erzwungen und anschließend ein Padding-Oracle-Angriff durchgeführt.
+
     * Logjam
+        Dieser ermöglicht einen Downgrade des Diffie-Hellman-Schlüsselaustauschs auf 512-bit Restklassengruppen.
 
 e. Nennen und erläutern Sie zwei Mitigation-Techniken bezüglich der Probleme des CA-Systems.
 
+    * Cert-pinning
+        "Es stellt eine Signatur-Hierarchie dar, wobei immer die übergeordnette Instanz, die darunter liegende signiert und damit bestätigt, dass diese Instanz glaubwürdig ist."
+    * Certificate Transparency
+        "Es soll sichtbar machen, wenn CAs Zertifikate auf Domains ausstellen, die bereits von anderen CAs mit Zertifikaten versorgt werden."
+
 f. Was ist die Zielstellung des "Let's Encrypt"-Projektes?
 
+    "Let’s Encrypt ist eine Zertifizierungsstelle, die kostenlose X.509-Zertifikate für Transport Layer Security (TLS) anbietet. Dabei ersetzt ein automatisierter Prozess die bisher gängigen komplexen händischen Vorgänge bei der Erstellung, Validierung, Signierung, Einrichtung und Erneuerung von Zertifikaten für verschlüsselte Websites. Ziel ist die Verteilung von Zertifikaten an alle Domänen, damit die Kommunikation im Internet in Zukunft komplett verschlüsselt abläuft."
+
 g. Was versteht man unter einem >>Cryptowar<<?
+
+    "Als Crypto Wars bezeichnet man Bestrebungen der US-amerikanischen Regierung, die private Verschlüsselung von Daten zu unterbinden."
 
 ---
 ### 5. Privacy Enhancing technologies (PETs)
@@ -285,23 +290,62 @@ a.
 
 b. Eräutern Sie die Aussage, es gäbe kein "belangloses Datum". Woher stammt sie?
 
+    Es ist das Resultat des Volkszählungsurteils von 1983 und besagt, dass jedes Datum unter Verwendung von vernetzten Datenbanken zu personenbezogenen Daten werden kann und damit zur eindeutigen Identifizierung führen kann.
+
 c. Erläutern Sie das Grundprinzip von "The Onion Router" und der TOR-hidden-service. Welche Eigenschaften werden so sichergestellt?
+
+    * Eigenschaften/Ziel
+        * IP-Adresse zu verschleiern
+        * Lokale Überwachnung zu verhindern
+
+    * Grundprinzip - The Onion Router
+        * Die Kommunikation nutzt die vorhanden Netzwerk-Infrastruktur auf Basis von TCP-Verbindungen.
+        * Die Kommunikation verläuft immer über drei Proxy-Knoten
+            * Guard (Einstiegspunkt ins Tor-Netz)
+            * Relay (Weiterleitung innerhalb des Tor-Netzes)
+            * Exit (Austrittspunkt aus dem Tor-Netz und Kommunikation zum Ziel Server)
+            * Kein Knoten kennt den kompletten Kommunikationsweg. Lediglich den letzten und nächsten Knoten, an den er die Pakete senden muss.
+
+    * Verbindungsaufbau/Kommunikation
+        * Der Tor-Client(TC) legt einen zufälligen Kommunikationsweg über Guard, Relay und Exit zum Zielserver fest.
+        * Im erste Durchlauf bezieht der TC über die jeweiligen Notes Ihre Public-Keys.
+        * Nachdem der TC die Public-Keys sämtlicher Teilnehmer hat, ist er in der Lage seine Nutzdaten, nach dem Zwiebel-Prinzip, zu verpacken und abzuschicken.
 
 d. Erklären Sie die Grenzen des PET-Ansatzes in Bezug auf den Schutz der Person. Was bedeutet diesbezüglich "digitale Infrastruktur"?
 
-e. Welches zentrales Recht wird in "The Right to Privacy" von Warren und Brandels 1890 postuliert? Ist es heute noch realistisch umsetzbar?
+    Grundlegend stellt der Ansatz die Möglichkeit dar, die Privatsphäre von Internetnutzer mittels zusätzlicher Methoden zu schützen. Dem gegenüber stehen die kommerziellen Dienstleister, die durch Anmeldung des jeweiligen Benutzers, eine Deanonymisierung durchführen.   
+
+e. Welches zentrales Recht wird in "The Right to Privacy" von Warren und Brandels 1890 postuliert? (Ist es heute noch realistisch umsetzbar?)
+
+    "Das Recht in ruhe gelassen zu werde."
 
 ---
 ### 6. Snowdenvorlesung
 
 a. Was ist eine Konsequenz davon, dass E-Mail-Verschlüsselung standardmäßig nur den EMail-Body verschlüsselt?
 
+    Die Konsequenz ist, das der Body der Nachricht nicht von Dritten gelesen werden kann. Jedoch ist es möglich an hand der Metadaten, wie Absender,  Zieladresse und Betreff, Rückschlüsse auf den Inhalt der Nachricht zu ziehen.
+
 b. Was ist XKEYSCORE, wer nutzt es und woraus besteht es?
+
+    Die "globale Suchmaschine" mit Informationen über Zielpersonen/- Gruppen, die von den USA und ihren Verbündeten genutzt wird.(Geheimdienste)
 
 c. Was will das GNUnet-Projekt leisten?
 
+
+Im Kern handelt es sich dabei um einen erweiterbaren Netzwerk-Stack, der alle
+wichtigen Netzwerkdienste für eine sichere, dezentrale, hierarchielose und teil-
+weise anonym organisierte globale Kommunikation und Datenverarbeitung zur Verfügung stellen soll.
+
 d.
 
-e. Was machen die NSA/GCHQ-Programme PRISM und Temora/Upstream?
+e. Was machen die NSA/GCHQ-Programme PRISM und Tempora/Upstream?
+
+    * PRISM
+        "Direktzugriff Unternehmensserver wie die von Apple, Microsoft, Google, Facebook, etc."
+    * Tempora/Upstream
+        "Die Daten werden direkt am Kabel abgegriffen."
+
+
 
 f.
