@@ -13,7 +13,7 @@ b. Erläutern Sie drei Merkmale der Informationsgesellschaft.
 
     * Globalisierung
     * IuK-Technologien (IKT) => Vernetzung
-    * Kulturelle Produktioni digitaler Medien
+    * Kulturelle Produktion digitaler Medien
     * Priorität von Forschung und Entwicklung
     * Warencharakter von Daten, Informationen und Wissen
     * Verletzbarkeit der Systeme
@@ -51,10 +51,10 @@ f. Was sind Informationen und welche vier Aspekte im DS-Konzept haben sie?
 
     Das "Daten" in Datenschutz mein Informationen als Modelle/Abbildungen für einen Zweck
     Semiotik:
-        * Syntax
-        * Semantik
-        * Prgmatik
-        * Sigmatik
+        * Syntax (Zeichenmäßige Repräsentation)
+        * Semantik (Bedeutung im Kontext)
+        * Pragmatik (Zweck)
+        * Sigmatik (Verweis auf betroffene Person)
 
 g. DS Urteile und Erläuterung (Resultat)
 
@@ -71,7 +71,7 @@ g. DS Urteile und Erläuterung (Resultat)
 
 a. Um welche Verschlüsselungsart handelt es sich bei Vigenère-Verschlüsselung und beschreiben Sie diese?
 
-    Es besteht aus einem Klartext-Alphabet und einem Schlüssel-Alphabet welche auf der x- und y-Achse des Vigenère-Quadrates liegen. Um den klartext zu verschlüsseln, wird jedes Zeichen des verschlüsselten Textes durch das gemeinsame Feld zwischen Klartext-Alphabet und Schlüssel-Alphabet definiert.
+    Es besteht aus einem Klartext-Alphabet und einem Schlüssel-Alphabet welche auf der x- und y-Achse des Vigenère-Quadrates liegen. Um den Klartext zu verschlüsseln, wird jedes Zeichen des verschlüsselten Textes durch das gemeinsame Feld zwischen Klartext-Alphabet und Schlüssel-Alphabet definiert.
     * Polyalphabetische Substituion
     * symmetrische Verschlüsselung
 
@@ -162,8 +162,6 @@ g. One-Time-Pad Funktionsbeschreibung.
         * geheim bleiben muss
         * nicht wiederverwendet werden darf
         * mit Nachricht geXOR'd wird.
-
-
 ---
 ### 3. Authentifizierung und Biometrie
 
@@ -252,7 +250,7 @@ c. Was ist der Unterschied zwischen einem Web of Trust und einer PKI? Nennen Sie
 
     * PKI
         + Der Widerruf eines Zertifikats wird nicht sofort allgemein bekannt.
-        - Zentralisierung der Zertifizierung (CA), damit muss lediglich eine CA/Zertifikat kompromittiert werden um alles Benutzer, die dieses Verwenden zu schädigen.
+        - Zentralisierung der Zertifizierung (CA), damit muss lediglich eine CA/Zertifikat kompromittiert werden um alle Benutzer, die dieses Verwenden zu schädigen.
     * WOT
         + Das Web of Trust ermöglicht seinen Teilnehmern die individuelle Kontrolle darüber, wen sie als vertrauenswürdig einstufen.
         -  Der Widerruf eines Zertifikats wird nicht sofort allgemein bekannt.
@@ -260,7 +258,7 @@ c. Was ist der Unterschied zwischen einem Web of Trust und einer PKI? Nennen Sie
 d. Nennen und erläutern Sie drei Angriffe auf TLS.
 
     * Downgrade
-        Das erzwingen einer veralteten TLS/SSL Vesion, um die in ihnen befindlichen Sicherheitslüclen auszunutzen.
+        Das erzwingen einer veralteten TLS/SSL Vesion, um die in ihnen befindlichen Sicherheitslücken auszunutzen.
 
     * POODLE (Padding Oracle On Downgraded Legacy Encryption)
         Es wird ein Downgrade erzwungen und anschließend ein Padding-Oracle-Angriff durchgeführt.
@@ -282,6 +280,7 @@ f. Was ist die Zielstellung des "Let's Encrypt"-Projektes?
 g. Was versteht man unter einem >>Cryptowar<<?
 
     "Als Crypto Wars bezeichnet man Bestrebungen der US-amerikanischen Regierung, die private Verschlüsselung von Daten zu unterbinden."
+    [...] und die daraus resultierenden "privaten" Entwicklungen der Verschlüsselungstechniken.
 
 ---
 ### 5. Privacy Enhancing technologies (PETs)
@@ -290,7 +289,7 @@ a.
 
 b. Eräutern Sie die Aussage, es gäbe kein "belangloses Datum". Woher stammt sie?
 
-    Es ist das Resultat des Volkszählungsurteils von 1983 und besagt, dass jedes Datum unter Verwendung von vernetzten Datenbanken zu personenbezogenen Daten werden kann und damit zur eindeutigen Identifizierung führen kann.
+    Es ist das Resultat des Volkszählungsurteils von 1983 und besagt, dass jedes Datum unter Verwendung von vernetzten Datenbanken zu personenbezogenen Daten und damit zur eindeutigen Identifizierung führen kann.
 
 c. Erläutern Sie das Grundprinzip von "The Onion Router" und der TOR-hidden-service. Welche Eigenschaften werden so sichergestellt?
 
@@ -311,13 +310,20 @@ c. Erläutern Sie das Grundprinzip von "The Onion Router" und der TOR-hidden-ser
         * Im erste Durchlauf bezieht der TC über die jeweiligen Notes Ihre Public-Keys.
         * Nachdem der TC die Public-Keys sämtlicher Teilnehmer hat, ist er in der Lage seine Nutzdaten, nach dem Zwiebel-Prinzip, zu verpacken und abzuschicken.
 
+    * TOR-hidden-service
+        * Im HS ist der Server der den Dienst bereitstellt anonym (End-to-End verschlüsselt), da er nur über die Tor-Adresse (.onion) erreichbar ist.
+        * HS haben IntroPoints (IP)
+        * Client wählt RP und One-time-secret
+        * Gibt RP an IP, mit OTS
+        * HS meldet sich bei RP, mit OTS
+
 d. Erklären Sie die Grenzen des PET-Ansatzes in Bezug auf den Schutz der Person. Was bedeutet diesbezüglich "digitale Infrastruktur"?
 
     Grundlegend stellt der Ansatz die Möglichkeit dar, die Privatsphäre von Internetnutzer mittels zusätzlicher Methoden zu schützen. Dem gegenüber stehen die kommerziellen Dienstleister, die durch Anmeldung des jeweiligen Benutzers, eine Deanonymisierung durchführen.   
 
 e. Welches zentrales Recht wird in "The Right to Privacy" von Warren und Brandels 1890 postuliert? (Ist es heute noch realistisch umsetzbar?)
 
-    "Das Recht in ruhe gelassen zu werde."
+    "Das Recht in Ruhe gelassen zu werden."
 
 ---
 ### 6. Snowdenvorlesung
@@ -332,10 +338,8 @@ b. Was ist XKEYSCORE, wer nutzt es und woraus besteht es?
 
 c. Was will das GNUnet-Projekt leisten?
 
-
 Im Kern handelt es sich dabei um einen erweiterbaren Netzwerk-Stack, der alle
-wichtigen Netzwerkdienste für eine sichere, dezentrale, hierarchielose und teil-
-weise anonym organisierte globale Kommunikation und Datenverarbeitung zur Verfügung stellen soll.
+wichtigen Netzwerkdienste für eine sichere, dezentrale, hierarchielose und teilweise anonym organisierte globale Kommunikation und Datenverarbeitung zur Verfügung stellen soll.
 
 d.
 
@@ -345,7 +349,4 @@ e. Was machen die NSA/GCHQ-Programme PRISM und Tempora/Upstream?
         "Direktzugriff Unternehmensserver wie die von Apple, Microsoft, Google, Facebook, etc."
     * Tempora/Upstream
         "Die Daten werden direkt am Kabel abgegriffen."
-
-
-
 f.
